@@ -1,0 +1,219 @@
+
+/* Base Styles */
+.admin-page {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f3f4f6;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .admin-header {
+    background-color: #1e90ff;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .admin-header nav a,
+  .admin-header nav button {
+    margin-left: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  
+  .admin-header nav button.logout-btn {
+    background-color: #ff4d4d;
+    border-radius: 6px;
+    padding: 8px 16px;
+  }
+  
+  .admin-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  /* Forms */
+  .admin-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .admin-form input[type="text"],
+  .admin-form input[type="password"] {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .admin-form label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 5px;
+    color: #333;
+  }
+  
+  .admin-form button {
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .admin-form button:hover {
+    background-color: #0d6efd;
+  }
+  
+  /* Music Cards */
+  .music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  
+  .music-card {
+    background: #fff;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: #e08282;
+  }
+  
+  .music-info h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: #222;
+  }
+  
+  .music-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .music-actions button {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .music-actions button:first-child {
+    background-color: #ffc107;
+    color: #333;
+  }
+  
+  .music-actions button:last-child {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  /* User Cards */
+  .user-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .user-card {
+    background-color: #fff;
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .user-info h4 {
+    margin: 0;
+    color: #111;
+  }
+  
+  .user-info p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .user-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .user-actions button {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .user-actions button:first-child {
+    background-color: #ffc107;
+    color: #000;
+  }
+  
+  .user-actions button:last-child {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  /* Modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    text-align: center;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .modal-buttons button {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .modal-buttons button:first-child {
+    background: #ccc;
+  }
+  
+  .modal-buttons button:last-child {
+    background: #ff4d4d;
+    color: white;
+  }
+  
