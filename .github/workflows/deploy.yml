@@ -34,12 +34,12 @@ jobs:
 
           # Restart backend (change to gunicorn if needed)
           fuser -k 5000/tcp || true
-          nohup flask run --host=0.0.0.0 --port=5000 &
+          nohup flask run --host=0.0.0.0 --port=5000 > flask.log 2>&1 &
 
           # Frontend
           cd ${{ secrets.FRONTEND_PATH }}
           npm install
-          npm run build
+          npm start
 
           echo "✅ Deployed successfully."
         EOF
