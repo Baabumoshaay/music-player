@@ -19,6 +19,11 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
 
+    - name: ⚙️ Configure SSH Keep-Alive
+      run: |
+        echo -e "Host *\n    ServerAliveInterval 20\n    TCPKeepAlive no" >> ~/.ssh/config
+        chmod 600 ~/.ssh/config
+
     - name: 🚀 Deploy to EC2
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
