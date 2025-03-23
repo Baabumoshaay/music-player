@@ -39,6 +39,7 @@ jobs:
           # Frontend
           cd ${{ secrets.FRONTEND_PATH }}
           npm install
+          chmod +x node_modules/.bin/react-scripts
           npm start
 
           echo "✅ Deployed successfully."

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import axios from "axios";
+import api from "../services/api";
 import { Link } from "react-router-dom";
 import MusicPlayer from "../components/MusicPlayer";
 import MusicList from "../components/MusicList";
@@ -13,7 +13,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchMusic = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/user/music");
+        const response = await api.get("/user/music");
         setMusicTracks(response.data);
       } catch (error) {
         console.error("Error fetching music:", error);
